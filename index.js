@@ -1,4 +1,4 @@
-db = require('./db/connection'); 
+db = require('./db/connections'); 
 const appTitle = './lib/title.js';
 const options = require('./lib/queries');
 
