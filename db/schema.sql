@@ -3,24 +3,13 @@ CREATE DATABASE IF NOT EXISTS employee_tracker;
 USE employee_tracker;
 
 -- Drop existing tables if they exist
-DROP TABLE IF EXISTS employees, managers, roles, departments;
+DROP TABLE IF EXISTS employees, roles, departments;
 
 -- Create departments table
 CREATE TABLE departments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL
 );
-
--- Create managers table
-CREATE TABLE managers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL,
-    department_id INT,
-    department_name VARCHAR(255),
-    FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE SET NULL
-);
-
 
 -- Create roles table
 CREATE TABLE roles (
