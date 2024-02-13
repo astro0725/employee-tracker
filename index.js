@@ -1,6 +1,6 @@
 db = require('./db/connections'); 
 const appTitle = require('./lib/title');
-const options = require('./lib/queries');
+const { options } = require('./lib/queries/menuChoices');
 
 // Function to start the application
 function startApp() {
